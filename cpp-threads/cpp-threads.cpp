@@ -5,7 +5,7 @@ static bool threadDone = false;
 void Thread1func() {
     while (!threadDone) {
         static auto threadId = std::this_thread::get_id();
-        std::cout << "Thread 1 running! ThreadID = " << threadId << "\n";
+        std::cout << "Thread 1 running! ThreadID = " << threadId << ". Waiting for return Key.\n";
         std::this_thread::sleep_for(std::chrono::seconds(2));
     }
 }
